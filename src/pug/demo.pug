@@ -1,0 +1,82 @@
+doctype html
+html(lang='en')
+
+    head
+
+        meta(charset='utf-8')
+        meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+        meta(name='description', content='')
+        meta(name='author', content='')
+
+        title Capacitur - Estadísticas
+
+        // Favicon
+        link(rel='icon', type='image/x-icon', href='assets/favicon.ico')
+
+        include includes/css.pug
+
+    body.d-flex.flex-column.h-100.bg-light
+
+        main.flex-shrink-0
+
+            // Navigation
+            include includes/navbar-logged-in.pug
+
+            // Projects Section
+            section.py-5
+                .container.px-5.mb-5
+                    .text-center.mb-5
+                        h1.display-5.fw-bolder.mb-0
+                            span.text-gradient.d-inline Última Sesión
+                            p.lead.fw-normal.text-muted.mb-0 Revisa tus estadísticas de la última sesión.
+                    .row.gx-5.justify-content-center
+
+                        .col-lg-11.col-xl-9.col-xxl-8
+
+                            .card.overflow-hidden.shadow.rounded-4.border-0.mb-5
+                                .card-body.p-0
+                                    .d-flex.align-items-center
+                                        .p-5
+                                            h2.fw-bolder Hospitalidad
+                                            p Qué tan acogedor se te ve a los ojos de los turistas.
+
+                                            div.stat.mb-8.mt-2
+                                                div.progress
+                                                    div.progress-bar.bg-gradient-primary-to-secondary(role='progressbar', style='width: 75%', aria-valuenow='75', aria-valuemin='0', aria-valuemax='100')
+                                                p.text-muted.mb-4 75%
+                            
+                                            div.mt-2
+                                                a.btn.btn.btn-lg.px-5.py-3.fs-6.fw-bolder(href='/') > Revisar Evaluación
+                                                a.btn.btn.btn-lg.px-5.py-3.fs-6.fw-bolder(href='/') > Ver Recursos
+
+                                        img.img-fluid(src='assets/hospitality-stat.png', alt='...')
+
+                            .card.overflow-hidden.shadow.rounded-4.border-0
+                                .card-body.p-0
+                                    .d-flex.align-items-center
+                                        .p-5
+                                            h2.fw-bolder Asertividad
+                                            p Qué tan seguro te ves a los ojos de los turistas.
+
+                                            div.stat
+                                                div.progress
+                                                    div.progress-bar.bg-gradient-primary-to-secondary(role='progressbar', style='width: 44%', aria-valuenow='44', aria-valuemin='0', aria-valuemax='100')
+                                                p.text-muted.mb-4 44%
+                                            
+                                            div.mt-4
+                                                a.btn.btn.btn-lg.px-5.py-3.fs-6.fw-bolder(href='/') > Revisar Evaluación
+                                                a.btn.btn.btn-lg.px-5.py-3.fs-6.fw-bolder(href='/') > Ver Recursos
+
+                                        img.img-fluid(src='assets/assertive-stat.png', alt='...')
+
+            // Call to action section
+            section.py-5.bg-gradient-primary-to-secondary.text-white
+                .container.px-5.my-5
+                    .text-center
+                        h2.display-4.fw-bolder.mb-4 ¿Cómo se calculan estas estadísticas?
+                        a.btn.btn-outline-light.btn-lg.px-5.py-3.fs-6.fw-bolder(href='contact.html') Revisa más información aquí
+
+        // Footer
+        include includes/footer.pug
+
+        include includes/scripts.pug
